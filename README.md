@@ -32,8 +32,8 @@ Search engine berbasis TF-IDF untuk mencari resep masakan Indonesia dengan kemam
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/username/kuliner-search-engine.git
-cd kuliner-search-engine
+git clone https://github.com/mchyns/Kuliner-Search-Engine.git
+cd Kuliner-Search-Engine
 ```
 
 ### 2. Install Dependencies
