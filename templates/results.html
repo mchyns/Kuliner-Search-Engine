@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ query }} - Kuliner Nusantara</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container results-page">
+        <div class="header">
+            <div class="logo">
+                <a href="/">
+                    <h1>Kuliner<span>Nusantara</span></h1>
+                </a>
+            </div>
+            <div class="search-box">
+                <form action="/search" method="get">
+                    <input type="text" name="q" value="{{ query }}" autocomplete="off">
+                    <button type="submit">Cari</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="results-info">
+            <p>Hasil pencarian untuk "{{ query }}" ({{ results|length }} hasil)</p>
+        </div>
+        
+        <div class="results-container">
+            {% if results %}
+                {% for result in results %}
+                    <div class="result-card {% if result.is_recipe %}recipe-card{% endif %}">
+                        {% if result.images and result.images|length > 0 %}
+                            <div class="result-image">
+                                <img src="{{ result.images[0] }}" alt="{{ result.title }}">
+                            </div>
+                        {% endif %}
+                        <div class="result-content">
+                            <h2>{{ result.title }}</h2>
+                            <p class="result-url"><a href="{{ result.url }}" target="_blank">Sumber Asli</a></p>
+                            
+                            {% if result.is_recipe %}
+                                <!-- Tampilkan format resep -->
+                                <div class="recipe-details">
+                                    <div class="recipe-ingredients">
+                                        <h3>Bahan-bahan:</h3>
+                                        <ul>
+                                            {% for ingredient in result.ingredients %}
+                                                <li>{{ ingredient }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="recipe-instructions">
+                                        <h3>Cara Memasak:</h3>
+                                        <ol>
+                                            {% for instruction in result.instructions %}
+                                                <li>{{ instruction }}</li>
+                                            {% endfor %}
+                                        </ol>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <!-- Tampilkan format artikel -->
+                                <p class="result-snippet">{{ result.content }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="no-results">
+                    <p>Tidak ada hasil yang ditemukan untuk "{{ query }}".</p>
+                    <p>Saran:</p>
+                    <ul>
+                        <li>Periksa ejaan kata kunci pencarian Anda</li>
+                        <li>Coba kata kunci yang berbeda</li>
+                        <li>Coba kata kunci yang lebih umum</li>
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 KulinerNusantara - Mesin Pencari Kuliner Indonesia</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+{
+  "timestamp": "2025-06-01T17:42:53.168204",
+  "total_documents": 9,
+  "vocabulary_size": 521,
+  "top_terms": [],
+  "sample_queries": [
+    {
+      "query": "nasi goreng",
+      "results_count": 3,
+      "top_results": [
+        {
+          "title": "Resep Ayam Goreng Lengkuas Rumahan yang Praktis dan Gurih",
+          "score": 0.15535837468266614
+        },
+        {
+          "title": "10 Makanan Tradisional Khas Indonesia yang Jarang Diketahui",
+          "score": 0.08536672273741426
+        },
+        {
+          "title": "Resep Empal Gepuk Daging Sapi dan Cara Membuatnya",
+          "score": 0.04145769722447781
+        }
+      ]
+    },
+    {
+      "query": "rendang",
+      "results_count": 1,
+      "top_results": [
+        {
+          "title": "10 Makanan Tradisional Khas Indonesia yang Jarang Diketahui",
+          "score": 0.10154941805342699
+        }
+      ]
+    },
+    {
+      "query": "soto",
+      "results_count": 1,
+      "top_results": [
+        {
+          "title": "12 Makanan Indonesia yang Diikuti Nama Daerah, Mana Favoritm",
+          "score": 0.07217464205918908
+        }
+      ]
+    }
+  ],
+  "top_discriminative_terms": [
+    [
+      "isi",
+      2.1972245773362196
+    ],
+    [
+      "begitu",
+      2.1972245773362196
+    ],
+    [
+      "helai",
+      2.1972245773362196
+    ],
+    [
+      "kue",
+      2.1972245773362196
+    ],
+    [
+      "butuh",
+      2.1972245773362196
+    ],
+    [
+      "makan",
+      2.1972245773362196
+    ],
+    [
+      "maizena",
+      2.1972245773362196
+    ],
+    [
+      "jepang",
+      2.1972245773362196
+    ],
+    [
+      "dadu",
+      2.1972245773362196
+    ],
+    [
+      "sapi",
+      2.1972245773362196
+    ],
+    [
+      "menggoyahkan",
+      2.1972245773362196
+    ],
+    [
+      "pelepas",
+      2.1972245773362196
+    ],
+    [
+      "bertahap",
+      2.1972245773362196
+    ],
+    [
+      "pembuatannya",
+      2.1972245773362196
+    ],
+    [
+      "dont",
+      2.1972245773362196
+    ],
+    [
+      "ditemukan",
+      2.1972245773362196
+    ],
+    [
+      "lagi",
+      2.1972245773362196
+    ],
+    [
+      "susu",
+      2.1972245773362196
+    ],
+    [
+      "nah",
+      2.1972245773362196
+    ],
+    [
+      "agak",
+      2.1972245773362196
+    ]
+  ]
+}
