@@ -226,8 +226,7 @@ Kontribusi sangat diterima! Silakan buat issue atau pull request.
 
 Jika ada pertanyaan atau masalah:
 - Create issue di GitHub
-- Email: your-email@example.com
-- Discord: YourUsername#1234
+- Instagram: mchynss
 
 ---
 
